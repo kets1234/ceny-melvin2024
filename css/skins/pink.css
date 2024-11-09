@@ -1,0 +1,16 @@
+/*  pink color style    */
+.btn-1:hover,
+.event-section .event-item-inner span,
+.story-section .story-item i,
+.story-section .story-text h3,
+.couple-section .couple i.bxs-heart,
+.couple-section .couple h3,
+header .nav ul li a.active,
+header .nav ul li a:hover{
+    color:#C4A484;
+}
+
+.event-section .event-item-inner:before,
+.couple-section .couple img{
+    border-color:#C4A484;
+}
