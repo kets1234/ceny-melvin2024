@@ -2,7 +2,7 @@
 <html lang="zxx">
 <head>
   <meta charset="utf-8">
-  <title>S & S Wedding Template</title>
+  <title>C & M Wedding 2024</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <!--boxicons-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -358,15 +358,15 @@
         <form action="" class="form">
           <div class="row">
             <div class="input-group w50">
-              <input type="text" placeholder="Full Name" class="input-control">
+              <input type="text" placeholder="Full Name" class="input-control" name="name">
             </div>
             <div class="input-group w50">
-              <input type="text" placeholder="E-mail" class="input-control">
+              <input type="text" placeholder="E-mail" class="input-control" name="mail">
             </div>
           </div>
           <div class="row">
             <div class="input-group">
-              <select name="" id="" class="input-control">
+              <select name="guest" id="" class="input-control">
                 <option value="">Number of Guest</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -378,7 +378,7 @@
           </div>
           <div class="row">
             <div class="input-group">
-              <select name="" id="" class="input-control">
+              <select name="attend" id="" class="input-control">
                 <option value="I am attending">I am attending</option>
                 <option value="I am not attending">I am not attending</option>
               </select>
@@ -386,7 +386,7 @@
           </div>
           <div class="row">
             <div class="input-group">
-              <textarea name="" placeholder="Message" id="" class="input-control"></textarea>
+              <textarea name="message" placeholder="Message" id="" class="input-control"></textarea>
             </div>
           </div>
           <div class="row">
@@ -424,6 +424,26 @@
 <p class="copyright-text">copyright &copy; 2024 E-morales</p>
 <!--copyright end-->
 
+  <!--rsvp script-->
+  <script>
+    let form = document.querySelector("form");
+  form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let data = new FormData(form);
+      fetch('https://script.google.com/macros/s/AKfycbwooTmyA4fuFUoyUXFz15S5ijT0UHt5u4U8OU5QsmtJufDTLJfz3Q28yMwuNfa8jViT/exec', {
+          method: "POST",
+          body: data
+      })
+      .then(res => res.text())
+      .then(data => {
+          console.log(data);
+          // Redirect to the next page after successful submission
+          window.location.href = 'index.html'; // Replace 'nextpage.html' with your desired URL
+      })
+      .catch(error => console.error('Error:', error));
+  });
+
+  </script>
   <!-- jquery -->
    <script src="js/jquery.min.js"></script>
   <!--scrollIt-->
