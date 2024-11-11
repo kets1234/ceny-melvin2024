@@ -94,4 +94,12 @@
         width: 290px;
         height: 290px;
     }
+
+    .section-title h2{
+        font-size: 35px;
+    }
+
+    .section-title i{
+        font-size: 20px;
+    }
 }
