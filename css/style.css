@@ -264,6 +264,7 @@ header, section, footer{
     margin: 0 0 15px;
 }
 
+.countdown,
 .home-section .slide.active .home-content p{
     opacity: 0;
     animation: fadeInTop 1s ease forwards;
@@ -861,4 +862,3 @@ p.copyright-text{
     border-top: 1px solid #cccccc;
 }
 
-/*responsive*/
