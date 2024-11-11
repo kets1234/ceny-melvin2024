@@ -1,19 +1,38 @@
-$(window).on("load", function(){
-    //home section slideshow
+$(window).on("load", function() {
     let slideIndex = $('.slide.active').index();
     const slideLen = $(".slide").length;
+    const targetDate = new Date("Dec 23, 2024 00:00:00").getTime();
 
-    function slideShow(){
+    function slideShow() {
         $(".slide").removeClass("active").eq(slideIndex).addClass("active");
-        if(slideIndex == slideLen - 1){
+        if (slideIndex == slideLen - 1) {
             slideIndex = 0;
-        } else{
+        } else {
             slideIndex++;
         }
         setTimeout(slideShow, 5000);
     }
+
+    function startCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Apply the values to each slide's countdown elements
+        $('.time#countdown-days').text(days);
+        $('.time#countdown-hours').text(hours);
+        $('.time#countdown-minutes').text(minutes);
+        $('.time#countdown-seconds').text(seconds);
+    }
+
     slideShow();
+    setInterval(startCountdown, 1000);
 });
+
 
 //gallery popup
 $(document).ready(function(){
