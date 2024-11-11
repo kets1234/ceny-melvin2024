@@ -211,6 +211,10 @@ header, section, footer{
     text-transform: capitalize;
 }
 
+.section-title i{
+    font-size: 30px;
+}
+
 /* Home Section */
 .home-section{
     min-height: 100vh;
@@ -543,7 +547,8 @@ header, section, footer{
 
 /*people section*/
 .people-section{
-    padding: 80px 0 0px;
+    padding: 40px 0 0px;
+    background-color: #c4a484;
 }
 
 .slider-frame{
@@ -733,6 +738,7 @@ header, section, footer{
     padding: 80px 0 80px;
 }
 
+.people-section .section-title h2,
 .rsvp-section .section-title h2,
 .rsvp-section .section-title p{
     color: #ffffff;
@@ -862,3 +868,20 @@ p.copyright-text{
     border-top: 1px solid #cccccc;
 }
 
+/**attire guide**/
+.attire-guide-section{
+    padding: 80px 0 80px;
+}
+
+.attire-container{
+    display: grid;
+    place-items: center;
+
+}
+
+.attire-guide-section .attire-guide img{
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    align-items: center;
+}
