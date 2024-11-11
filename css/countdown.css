@@ -4,7 +4,7 @@
 
 h1 {
     color: #F5F5F5;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 table {
@@ -16,16 +16,48 @@ table {
     justify-content: center;
 }
 
-.heading {
+.heads {
     color: #F5F5F5;
-    font-size: 18px;
+    font-size: 9px;
     text-transform: uppercase;
 }
 
 .time {
-    background-color: #090909;
+    background: transparent;
     color: #FFFFFF;
-    font-size: 100px;
-    width: 150px;
+    font-size: 50px;
+    width: 75px;
     margin: 0 10px;
+}
+
+
+
+@media(max-width: 774px){
+    h1 {
+        color: #F5F5F5;
+        font-size: 10px;
+    }
+    
+    table {
+        margin: auto;
+    }
+    
+    .countdown {
+        display: flex;
+        justify-content: center;
+    }
+
+    .heads {
+        color: #F5F5F5;
+        font-size: 4.5px;
+        text-transform: uppercase;
+    }
+    
+    .time {
+        background: transparent;
+        color: #FFFFFF;
+        font-size: 25px;
+        width: 37.5px;
+        margin: 0 10px;
+    }
 }
