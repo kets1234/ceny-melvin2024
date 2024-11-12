@@ -546,56 +546,56 @@ header, section, footer{
 }
 
 /*people section*/
-.people-section{
-    padding: 40px 0 0px;
+.people-section {
+    padding: 40px 0;
     background-color: #c4a484;
 }
 
-.slider-frame{
+.slider-frame {
     overflow: hidden;
-    height: 800px;
-    width: 600px;
+    height: 820px; /* Adjusted height to better fit small screens */
+    width: 100%;
+    max-width: 574px;
     margin: auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.slider-frame .slide-images img{
-    width: 50%;
-    height: 50%;
-}
-
-@-webkit-keyframes slide_animation{
-    0%{left:0px}
-    10%{left:0px}
-    20%{left:1200px}
-    30%{left:1200px}
-    40%{left:2400px}
-    50%{left:2400px}
-    60%{left:1200px}
-    70%{left:1200px}
-    80%{left:0px}
-    90%{left:0px}
-    100%{left:0px}
-}
-
-.slide-images{
-    width: 3600px;
-    height: 1800px;
-    margin: 0 0 0 -2400px;
+.slider-frame .slide-images {
+    display: flex;
+    transition: transform 1s ease;
     position: relative;
-    -webkit-animation-name: slide_animation;
-    -webkit-animation-duration: 33s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-play-state: running;
+    animation: slide_animation 20s infinite;
 }
 
-.img-container{
-    height: 1500px;
-    width: 1200px;
-    position: relative;
-    float: left;
-    align-items: center;
+.slider-frame .slide-images img {
+    width: 100%; /* Full width within container */
+    height: auto; /* Maintain aspect ratio */
 }
+
+@keyframes slide_animation {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-100%); }
+    50%, 70% { transform: translateX(-200%); }
+    75%, 100% { transform: translateX(0); }
+}
+
+.img-container {
+    min-width: 100%; /* Each image takes full width */
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 574px) {
+    
+    .slider-frame {
+        height: 620px; /* Reduced height for smaller screens */
+        margin-top: -50px;
+        padding-bottom: 20px;
+    }
+}
+
 
 /*Gallery Section*/
 .gallery-section{
