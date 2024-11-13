@@ -285,11 +285,12 @@ header, section, footer{
 }
 
 .home-section .home-content h1{
-    font-size: 80px;
+    font-size: 120px;
     color: #ffffff;
     margin: 0;
     font-weight: normal;
     font-family: "Great Vibes", cursive;
+    letter-spacing: 5px;
 }
 
 .home-section .slide.active .home-content h1{
@@ -467,6 +468,8 @@ header, section, footer{
 .event-section{
     background-color: #c4a484;
     padding: 80px 0 130px;
+    min-height: 100vh;
+    position: relative;
 }
 
 .event-section .section-title h2{
@@ -549,14 +552,17 @@ header, section, footer{
 .people-section {
     padding: 40px 0;
     background-color: #c4a484;
+    min-height: 100vh;
+    position: relative;
 }
 
 .slider-frame {
     overflow: hidden;
-    height: 820px; /* Adjusted height to better fit small screens */
+    height: 720px; /* Adjusted height to better fit small screens */
     width: 100%;
     max-width: 574px;
     margin: auto;
+    margin-top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -571,7 +577,7 @@ header, section, footer{
 
 .slider-frame .slide-images img {
     width: 100%; /* Full width within container */
-    height: auto; /* Maintain aspect ratio */
+    height: 720px; /* Maintain aspect ratio */
 }
 
 @keyframes slide_animation {
@@ -600,6 +606,8 @@ header, section, footer{
 /*Gallery Section*/
 .gallery-section{
     padding: 80px 0 80px;
+    min-height: 100vh;
+    position: relative;
 }
 
 .gallery-section .gallery-item{
@@ -870,7 +878,9 @@ p.copyright-text{
 
 /**attire guide**/
 .attire-guide-section{
-    padding: 80px 0 80px;
+    padding: 40px 0px 80px;
+    min-height: 100vh;
+    position: relative;
 }
 
 .attire-container{
@@ -881,7 +891,12 @@ p.copyright-text{
 
 .attire-guide-section .attire-guide img{
     display: block;
-    overflow: hidden;
-    margin: auto;
     align-items: center;
+    margin-top: -10px;
+}
+
+.attire-container .section-title p{
+    font-family: "Roboto", sans-serif;
+    color: #555555;
+    margin-top: 20px;
 }
