@@ -596,9 +596,17 @@ header, section, footer{
 @media (max-width: 574px) {
     
     .slider-frame {
-        height: 620px; /* Reduced height for smaller screens */
-        margin-top: -50px;
+        height: 1020px; /* Reduced height for smaller screens */
+        margin-top: -150px;
         padding-bottom: 20px;
+    }
+
+    .people-section {
+        padding: 20px 0 0px;        
+    }
+
+    .people-section .section-title h2{
+        margin-top: 50px;
     }
 }
 
