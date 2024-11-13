@@ -3,6 +3,13 @@
         display: block !important;
     }
 }
+
+@media (max-width: 1058px) {
+    .nav li a{
+        font-size: 10px;
+    }
+}
+
 @media(max-width: 991px){
     .gallery-section .gallery-item,
     .event-section .event-item{
@@ -78,6 +85,9 @@
         padding: 0 15px 0 60px;
     }
 }
+
+
+
 @media(max-width: 574px){
     .rsvp-section .form{
         padding: 60px 0px;
@@ -101,5 +111,9 @@
 
     .section-title i{
         font-size: 20px;
+    }
+
+    .attire-guide-section .section-title h2{
+        margin-top: 150px;
     }
 }
